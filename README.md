@@ -25,7 +25,7 @@
 
 | 模块 | 代码位置 | 说明 |
 |:---|:---|:---|
-| **游戏管理器** | [GameManager.cs](https://github.com/C-H-Z/2D-RPG-Demo/blob/main/Scripts/SceneChange/GameManager.cs) | 全局单例，管理游戏状态（如有） |
+| **游戏管理器** | [GameManager.cs](https://github.com/C-H-Z/2D-RPG-Demo/blob/main/Scripts/SceneChange/GameManager.cs) | 全局单例，管理游戏状态 |
 | **玩家移动** | [PlayerMovement.cs](https://github.com/C-H-Z/2D-RPG-Demo/blob/main/Scripts/PlayerScripts/PlayerMovement.cs) | 输入处理与移动逻辑 |
 | **玩家战斗** | [Player_Combat.cs](https://github.com/C-H-Z/2D-RPG-Demo/blob/main/Scripts/PlayerScripts/Player_Combat.cs) | 近战攻击、伤害计算 |
 | **远程攻击** | [Player_Bow.cs](https://github.com/C-H-Z/2D-RPG-Demo/blob/main/Scripts/PlayerScripts/Player_Bow.cs) | 弓箭射击逻辑 |
