@@ -21,16 +21,28 @@
 - ScriptableObject 数据驱动设计
 - 单例模式架构
 
-## 📂 核心代码快速入口
-
-| 模块 | 代码位置 | 说明 |
-|:---|:---|:---|
-| 游戏管理器 | [GameManager.cs](Scripts\SceneChange\GameManager.cs) | 单例管理器，管理游戏状态 |
-| 属性管理器 | [StatasManager.cs](Scripts\PlayerScripts\StatsManager.cs) | 管理玩家属性，单例实现  |
-| 玩家控制 | [PlayerMovement.cs](Scripts\PlayerScripts\PlayerMovement.cs) | 输入处理与移动逻辑 |
-| 战斗系统 | [Player_Combat.cs](Scripts\PlayerScripts\Player_Combat.cs) | 攻击、伤害计算 |
-| 背包系统 | [InventoryManager.cs](Scripts\Inventory&Shop\InventoryManager.cs) | 物品管理，单例实现 |
-| 技能树 | [SkillTreeManager.cs](Scripts\SkillTree\SkillManager.cs) | 技能解锁与升级 |
+📂 核心代码
+模块	代码位置	说明
+游戏管理器	GameManager.cs	全局单例，管理游戏状态（如有）
+玩家移动	PlayerMovement.cs	输入处理与移动逻辑
+玩家战斗	Player_Combat.cs	近战攻击、伤害计算
+远程攻击	Player_Bow.cs	弓箭射击逻辑
+属性管理器	StatsManager.cs	单例模式，管理生命、伤害等属性
+经验系统	ExpManager.cs	经验获取与升级
+玩家生命	PlayerHealth.cs	受伤、死亡处理
+装备更换	Player_ChangeEquipment.cs	装备切换逻辑
+属性UI	StatsUI.cs	属性面板显示
+弓箭逻辑	Arrow.cs	投射物行为
+背包管理器	InventoryManager.cs	单例模式，物品管理
+物品数据	ItemSO.cs	ScriptableObject，物品配置
+背包格子	InventorySlot.cs	UI格子逻辑
+掉落系统	Loot.cs	敌人死亡掉落
+物品使用	UseItem.cs	使用物品效果
+技能树管理器	SkillTreeManager.cs	单例模式，技能解锁
+技能管理器	SkillManager.cs	技能效果应用
+技能数据	SkillSO.cs	ScriptableObject，技能配置
+技能格子	SkillSlot.cs	UI格子逻辑
+技能开关	ToggleSkillTree.cs	打开/关闭技能树
 
 ## 快速开始
 1. 克隆仓库：`git clone https://github.com/C-H-Z/2D-RPG-Demo.git`
