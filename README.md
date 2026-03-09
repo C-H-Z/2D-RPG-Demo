@@ -25,12 +25,12 @@
 
 | 模块 | 代码位置 | 说明 |
 |:---|:---|:---|
-| 游戏管理器 | [GameManager.cs](Assets/Scripts/GameManager.cs) | 单例管理器，管理游戏状态 |
-| 属性管理器 | [StatasManager.cs](Assets/Scripts/StatasManager.cs) | 管理玩家属性，单例实现  |
-| 玩家控制 | [PlayerMovement.cs](Assets/Scripts/PlayerMovement.cs) | 输入处理与移动逻辑 |
-| 战斗系统 | [Player_Combat.cs](Assets/Scripts/Player_Combat.cs) | 攻击、伤害计算 |
-| 背包系统 | [InventoryManager.cs](Assets/Scripts/Inventory&Shop/InventoryManager.cs) | 物品管理，单例实现 |
-| 技能树 | [SkillTreeManager.cs](Assets/Scripts/SkillTree/SkillTreeManager.cs) | 技能解锁与升级 |
+| 游戏管理器 | [GameManager.cs](Scripts\SceneChange\GameManager.cs) | 单例管理器，管理游戏状态 |
+| 属性管理器 | [StatasManager.cs](Scripts\PlayerScripts\StatsManager.cs) | 管理玩家属性，单例实现  |
+| 玩家控制 | [PlayerMovement.cs](Scripts\PlayerScripts\PlayerMovement.cs) | 输入处理与移动逻辑 |
+| 战斗系统 | [Player_Combat.cs](Scripts\PlayerScripts\Player_Combat.cs) | 攻击、伤害计算 |
+| 背包系统 | [InventoryManager.cs](Scripts\Inventory&Shop\InventoryManager.cs) | 物品管理，单例实现 |
+| 技能树 | [SkillTreeManager.cs](Scripts\SkillTree\SkillManager.cs) | 技能解锁与升级 |
 
 ## 快速开始
 1. 克隆仓库：`git clone https://github.com/C-H-Z/2D-RPG-Demo.git`
