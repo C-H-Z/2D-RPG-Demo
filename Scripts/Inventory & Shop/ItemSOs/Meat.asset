@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2b1be08720d6434f9ed4c36e8246390, type: 3}
+  m_Name: Meat
+  m_EditorClassIdentifier: 
+  itemName: Meat
+  itemDescription: "\u5403\u5230\u5634\u91CC\u7F8E\u6C41\u6C41\u513F"
+  icon: {fileID: 1008609052, guid: 45777e84ab46eac4ab697ce4a79abeae, type: 3}
+  isGold: 0
+  stackSize: 3
+  currentHealth: 0
+  maxHealth: 5
+  speed: 0.3
+  damage: 0
+  duration: 0
