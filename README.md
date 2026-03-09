@@ -21,6 +21,17 @@
 - ScriptableObject 数据驱动设计
 - 单例模式架构
 
+## 📂 核心代码快速入口
+
+| 模块 | 代码位置 | 说明 |
+|:---|:---|:---|
+| 游戏管理器 | [GameManager.cs](Assets/Scripts/GameManager.cs) | 全局单例，管理游戏状态 |
+| 玩家控制 | [PlayerMovement.cs](Assets/Scripts/PlayerMovement.cs) | 输入处理与移动逻辑 |
+| 战斗系统 | [Player_Combat.cs](Assets/Scripts/Player_Combat.cs) | 攻击、伤害计算 |
+| 背包系统 | [InventoryManager.cs](Assets/Scripts/Inventory&Shop/InventoryManager.cs) | 物品管理，单例实现 |
+| 技能树 | [SkillTreeManager.cs](Assets/Scripts/SkillTree/SkillTreeManager.cs) | 技能解锁与升级 |
+| 敌人AI | [Enemy_AI.cs](Assets/Scripts/Enemy_AI.cs) | 状态机实现 |
+
 ## 快速开始
 1. 克隆仓库：`git clone https://github.com/C-H-Z/2D-RPG-Demo.git`
 2. 用 Unity Hub 打开项目文件夹
