@@ -48,6 +48,13 @@
 
 ## 📂 核心代码快速入口
 
+### ✨ 自定义渲染系统
+
+| 脚本 | 路径 | 说明 |
+|:---|:---|:---|
+| **受击闪红Shader** | [SpriteFlashRed.shader](https://github.com/C-H-Z/2D-RPG-Demo/blob/main/Scripts/Shader/SpriteFlashRed.shader) | **自定义着色器**，通过Lerp混合实现受击闪红效果 |
+| **闪红控制器** | [SpriteFlashEffect.cs](https://github.com/C-H-Z/2D-RPG-Demo/blob/main/Scripts/Shader/SpriteFlashEffect.cs) | 控制Shader参数，实现受伤闪红动画及自动消退 |
+
 ### 👤 玩家系统 (`Scripts/PlayerScripts/`)
 
 | 脚本 | 路径 | 说明 |
