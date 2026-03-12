@@ -16,9 +16,11 @@ public class PlayerHealth : MonoBehaviour
 
     public void ChangeHealth(int amount)
     {
+        GetComponent<SpriteFlashURP>().Flash();
         StatsManager.Instance.currentHealth += amount;
         healthTextAnim.Play("TextUpdate");
         healthText.text = "HP:" + StatsManager.Instance.currentHealth + " / " + StatsManager.Instance.maxHealth;
+
         if (StatsManager.Instance.currentHealth <= 0)
         {
             gameObject.SetActive(false);
