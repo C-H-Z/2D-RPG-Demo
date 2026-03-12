@@ -26,6 +26,7 @@
 
 | 模块 | 说明 | 关键脚本 |
 |:---|:---|:---|
+| **✨ 自定义渲染系统** | URP 2D光照管线 + 自定义Shader特效 | `GlobalDayNight`、`EnemyTorchLight`、`SpriteFlashURP`、`Fire_Realistic` |
 | **👤 玩家系统** | 移动、战斗、属性、经验 | `PlayerMovement`、`Player_Combat`、`StatsManager`、`ExpManager` |
 | **👾 敌人 AI** | 移动、战斗逻辑 | `Enemy_Movement`、`Enemy_Combat` |
 | **🎒 背包系统** | 物品管理、掉落、使用 | `InventoryManager`、`ItemSO`、`Loot`、`UseItem` |
@@ -46,14 +47,34 @@
 
 ---
 
+## 🛠️ 渲染系统技术栈
+
+| 技术 | 用途 |
+|:---|:---|
+| **URP 2D Renderer** | 2D光照渲染管线基础 |
+| **HLSL** | 自定义着色器编程语言 |
+| **ShaderLab** | Shader结构声明 |
+| **Light 2D (Point/Global)** | 动态光源与全局昼夜 |
+| **Shadow Caster 2D** | 实时阴影投射 |
+| **顶点/片段着色器** | 顶点动画与像素颜色控制 |
+| **材质参数控制** | C#动态调整Shader属性 |
+| **协程** | 闪红消退等动画时序控制 |
+| **正弦/噪声函数** | 火焰闪烁与随机扰动 |
+| **线性插值(lerp)** | 颜色混合与昼夜过渡 |
+
+
 ## 📂 核心代码快速入口
 
 ### ✨ 自定义渲染系统
 
 | 脚本 | 路径 | 说明 |
 |:---|:---|:---|
-| **受击闪红Shader** | [SpriteFlashRed.shader](https://github.com/C-H-Z/2D-RPG-Demo/blob/main/Scripts/Shader/SpriteFlashRed.shader) | **自定义着色器**，通过Lerp混合实现受击闪红效果 |
-| **闪红控制器** | [SpriteFlashEffect.cs](https://github.com/C-H-Z/2D-RPG-Demo/blob/main/Scripts/Shader/SpriteFlashEffect.cs) | 控制Shader参数，实现受伤闪红动画及自动消退 |
+| **角色闪红控制** | [SpriteFlashEffect.cs](https://github.com/C-H-Z/2D-RPG-Demo/blob/main/Shader/SpriteFlashURP.cs) | 控制Shader参数，实现受伤闪红动画及自动消退 |
+| **昼夜变换系统** | [SpriteFlashEffect.cs](https://github.com/C-H-Z/2D-RPG-Demo/blob/main/Shader/GlobalDayNight.cs) |基于URP光照渲染管线搭建的日夜变换系统 |
+| **营火火焰渲染** | [SpriteFlashEffect.cs](https://github.com/C-H-Z/2D-RPG-Demo/blob/main/Shader/Fire_Sway.shader) |基于自定义着色器材质管线的火焰动态效果 |
+| **营火光照控制** | [SpriteFlashEffect.cs](https://github.com/C-H-Z/2D-RPG-Demo/blob/main/Shader/CampfireFlicker.cs) |基于URP光照渲染管线的营火光照控制，实现与日夜变换联动效果|
+| **火把哥布林光照控制器** | [SpriteFlashEffect.cs](https://github.com/C-H-Z/2D-RPG-Demo/blob/main/Shader/EnemyTorchLight.cs) |基于URP光照渲染管线的小怪光源控制|
+
 
 ### 👤 玩家系统 (`Scripts/PlayerScripts/`)
 
