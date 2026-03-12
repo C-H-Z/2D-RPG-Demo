@@ -14,7 +14,6 @@ public class Enemy_Health : MonoBehaviour
     public GameObject goldPrefab;
     public int quantity = 3;
     public ItemSO goldItemData;
-    public SpriteFlashEffect _flashEffect;
 
     private void Start()
     {
@@ -23,7 +22,7 @@ public class Enemy_Health : MonoBehaviour
 
     public void ChangeHealth(int amount)
     {
-        _flashEffect.TriggerRedFlash();
+        GetComponent<SpriteFlashURP>().Flash();
         currentHealth += amount;
         if (currentHealth > maxHealth)
         {
